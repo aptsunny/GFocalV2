@@ -2,18 +2,25 @@ _base_ = [
     '../_base_/datasets/coco_detection.py',
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
+
+use_syncBN_torch = True
+
 model = dict(
     type='GFL',
-    pretrained='torchvision://resnet50',
+    # pretrained='torchvision://resnet50',
+    # backbone=dict(
+    #     type='ResNet',
+    #     depth=50,
+    #     num_stages=4,
+    #     out_indices=(0, 1, 2, 3),
+    #     frozen_stages=1,
+    #     norm_cfg=dict(type='BN', requires_grad=True),
+    #     norm_eval=True,
+    #     style='pytorch'),
     backbone=dict(
-        type='ResNet',
-        depth=50,
-        num_stages=4,
-        out_indices=(0, 1, 2, 3),
-        frozen_stages=1,
-        norm_cfg=dict(type='BN', requires_grad=True),
-        norm_eval=True,
-        style='pytorch'),
+        type='TinyNAS',
+        net_str='configs/gfocal_maedet/best_structure.json'
+    ),
     neck=dict(
         type='FPN',
         in_channels=[256, 512, 1024, 2048],

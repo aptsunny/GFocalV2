@@ -1,0 +1,182 @@
+{
+  "best_structures": [
+    [
+      {
+        "class": "ConvKXBNRELU",
+        "in": 3,
+        "k": 3,
+        "out": 8,
+        "s": 2
+      },
+      {
+        "L": 3,
+        "btn": 64,
+        "class": "SuperResK1KXK1",
+        "in": 8,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 256,
+        "s": 2
+      },
+      {
+        "L": 2,
+        "btn": 128,
+        "class": "SuperResK1KXK1",
+        "in": 256,
+        "inner_class": "ResK1KXK1",
+        "k": 5,
+        "out": 768,
+        "s": 2
+      },
+      {
+        "L": 5,
+        "btn": 384,
+        "class": "SuperResK1KXK1",
+        "in": 768,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 768,
+        "s": 2
+      },
+      {
+        "L": 4,
+        "btn": 256,
+        "class": "SuperResK1KXK1",
+        "in": 768,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 1024,
+        "s": 1
+      },
+      {
+        "L": 2,
+        "btn": 304,
+        "class": "SuperResK1KXK1",
+        "in": 1024,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 2048,
+        "s": 2
+      }
+    ],
+    [
+      {
+        "class": "ConvKXBNRELU",
+        "in": 3,
+        "k": 3,
+        "out": 16,
+        "s": 2
+      },
+      {
+        "L": 3,
+        "btn": 64,
+        "class": "SuperResK1KXK1",
+        "in": 16,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 192,
+        "s": 2
+      },
+      {
+        "L": 6,
+        "btn": 128,
+        "class": "SuperResK1KXK1",
+        "in": 192,
+        "inner_class": "ResK1KXK1",
+        "k": 5,
+        "out": 768,
+        "s": 2
+      },
+      {
+        "L": 3,
+        "btn": 256,
+        "class": "SuperResK1KXK1",
+        "in": 768,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 768,
+        "s": 2
+      },
+      {
+        "L": 1,
+        "btn": 152,
+        "class": "SuperResK1KXK1",
+        "in": 768,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 1280,
+        "s": 1
+      },
+      {
+        "L": 2,
+        "btn": 304,
+        "class": "SuperResK1KXK1",
+        "in": 1280,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 2048,
+        "s": 2
+      }
+    ],
+    [
+      {
+        "class": "ConvKXBNRELU",
+        "in": 3,
+        "k": 3,
+        "out": 16,
+        "s": 2
+      },
+      {
+        "L": 1,
+        "btn": 80,
+        "class": "SuperResK1KXK1",
+        "in": 16,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 128,
+        "s": 2
+      },
+      {
+        "L": 5,
+        "btn": 128,
+        "class": "SuperResK1KXK1",
+        "in": 128,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 512,
+        "s": 2
+      },
+      {
+        "L": 3,
+        "btn": 256,
+        "class": "SuperResK1KXK1",
+        "in": 512,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 768,
+        "s": 2
+      },
+      {
+        "L": 2,
+        "btn": 384,
+        "class": "SuperResK1KXK1",
+        "in": 768,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 616,
+        "s": 1
+      },
+      {
+        "L": 3,
+        "btn": 304,
+        "class": "SuperResK1KXK1",
+        "in": 616,
+        "inner_class": "ResK1KXK1",
+        "k": 3,
+        "out": 2048,
+        "s": 2
+      }
+    ]
+  ],
+  "space_arch": "MasterNet"
+}

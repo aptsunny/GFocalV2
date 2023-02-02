@@ -150,7 +150,10 @@ def main():
 
     model = build_detector(
         cfg.model, train_cfg=cfg.train_cfg, test_cfg=cfg.test_cfg)
-
+    if cfg.model.backbone.type in ["TinyNAS"] and cfg.use_syncBN_torch:
+        model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model)
+        logger.info(f'Model:\n{model}')
+    
     datasets = [build_dataset(cfg.data.train)]
     if len(cfg.workflow) == 2:
         val_dataset = copy.deepcopy(cfg.data.val)
